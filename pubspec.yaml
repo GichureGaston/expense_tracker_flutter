@@ -43,6 +43,7 @@ dependencies:
   http:
   shared_preferences:
   flutter_bloc:
+  sqflite:
 
 
 dev_dependencies:

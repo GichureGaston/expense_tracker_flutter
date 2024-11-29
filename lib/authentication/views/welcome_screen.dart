@@ -66,10 +66,10 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                           controller: tabController,
                           unselectedLabelColor: Theme.of(context)
                               .colorScheme
-                              .onBackground
+                              .onSurface
                               .withOpacity(0.5),
                           labelColor:
-                              Theme.of(context).colorScheme.onBackground,
+                              Theme.of(context).colorScheme.onSurface,
                           tabs: const [
                             Padding(
                                 padding: EdgeInsets.all(12.0),

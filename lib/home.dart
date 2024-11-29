@@ -17,6 +17,8 @@ class HomeScreen extends StatefulWidget {
     DrawerItem("Analytics", Icons.insert_chart),
   ];
 
+  const HomeScreen({super.key});
+
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }

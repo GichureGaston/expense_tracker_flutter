@@ -10,11 +10,12 @@ class MyAppView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'ExpenseTracker',
         theme: ThemeData(
             colorScheme: ColorScheme.light(
-          background: Colors.grey.shade100,
-          onBackground: Colors.purple.shade700,
+          surface: Colors.grey.shade100,
+          onSurface: Colors.purple.shade700,
           primary: Colors.yellow.shade800,
           onPrimary: Colors.white,
         )),
@@ -28,7 +29,7 @@ class MyAppView extends StatelessWidget {
                     create: (context) => AuthenticationBloc(),
                   ),
                 ],
-                child: HomeScreen(),
+                child: const HomeScreen(),
               );
             } else {
               return const WelcomeScreen();

@@ -16,10 +16,10 @@ class RegisterUser {
   static final empty = RegisterUser(email: '', password1: '', password2: '');
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['email'] = this.email;
-    data['password1'] = this.password1;
-    data['password2'] = this.password2;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['email'] = email;
+    data['password1'] = password1;
+    data['password2'] = password2;
 
     return data;
   }

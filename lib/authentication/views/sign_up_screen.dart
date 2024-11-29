@@ -164,7 +164,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         style: TextStyle(
                             color: containsUpperCase
                                 ? Colors.green
-                                : Theme.of(context).colorScheme.onBackground),
+                                : Theme.of(context).colorScheme.onSurface),
                       ),
                       Text(
                         "⚈  1 lowercase",

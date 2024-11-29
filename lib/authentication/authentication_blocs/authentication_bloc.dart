@@ -68,7 +68,7 @@ class AuthenticationBloc
     emit(state.copyWith(authenticationStatus: AuthenticationStatus.loading));
     try {
       final result =
-          await _loginHttpsClient.createUser(event.loginUser as LoginUser?);
+          await _loginHttpsClient.createUser(event.loginUser);
       final SharedPreferences prefs = await SharedPreferences.getInstance();
       await prefs.setString("jwt", result?.access ?? '');
 

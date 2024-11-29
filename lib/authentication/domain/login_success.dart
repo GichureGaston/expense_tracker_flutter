@@ -8,15 +8,15 @@ class LoginSuccess {
   LoginSuccess.fromJson(Map<String, dynamic> json) {
     access = json['access'];
     refresh = json['refresh'];
-    user = json['user'] != null ? new User.fromJson(json['user']) : null;
+    user = json['user'] != null ? User.fromJson(json['user']) : null;
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['access'] = this.access;
-    data['refresh'] = this.refresh;
-    if (this.user != null) {
-      data['user'] = this.user!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['access'] = access;
+    data['refresh'] = refresh;
+    if (user != null) {
+      data['user'] = user!.toJson();
     }
     return data;
   }
@@ -38,11 +38,11 @@ class User {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['pk'] = this.pk;
-    data['email'] = this.email;
-    data['first_name'] = this.firstName;
-    data['last_name'] = this.lastName;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['pk'] = pk;
+    data['email'] = email;
+    data['first_name'] = firstName;
+    data['last_name'] = lastName;
     return data;
   }
 }
